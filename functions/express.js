@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require('cors');
 const serverless = require("serverless-http");
 
 const app = express();
 const router = express.Router();
 
 app.use(express.json());
+app.use(cors());
 
 const baseUrl = "http://3.109.236.90";
 const getAllVehicleEndpoint = "/rhl/get/all/vehicle/details";
